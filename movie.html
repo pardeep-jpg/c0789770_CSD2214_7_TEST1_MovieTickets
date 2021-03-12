@@ -105,6 +105,7 @@
       submit
         </button>
       </a> 
+      
       <script>
      
         var count=0;
@@ -118,7 +119,15 @@
             if (!event.target.classList.contains('occupied') && !event.target.classList.contains('selected') ){
             count++;
       
-  
+            var total=count*price;
+          event.target.classList.add("selected");
+          document.getElementById("count").innerText=count;
+          document.getElementById("total").innerText=total;
+
+          }
+        })
+      }
+    </script>
 
 
    
